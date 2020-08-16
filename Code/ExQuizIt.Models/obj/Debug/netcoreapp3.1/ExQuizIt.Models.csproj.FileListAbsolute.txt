@@ -1,0 +1,9 @@
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\bin\Debug\netcoreapp3.1\ExQuizIt.Models.deps.json
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\bin\Debug\netcoreapp3.1\ExQuizIt.Models.dll
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.csprojAssemblyReference.cache
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.AssemblyInfoInputs.cache
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.AssemblyInfo.cs
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.csproj.CoreCompileInputs.cache
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\bin\Debug\netcoreapp3.1\ExQuizIt.Models.pdb
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.dll
+D:\Documenten\NMCT\Semester_4\Backend Development\QuizProject\ExQuizIt\ExQuizIt.Models\obj\Debug\netcoreapp3.1\ExQuizIt.Models.pdb

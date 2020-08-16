@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ExQuizIt.Models.GamePlayer>
+
+@{
+	ViewData["Title"] = "Scoreboard";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Scoreboard</h1>
+
+<table class="table">
+	<thead>
+		<tr class="table-active">
+			<th>
+				@Html.DisplayNameFor(model => model.Player.Displayname)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Score)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr class="table-active">
+				<td>
+					@Html.DisplayFor(modelItem => item.Player.Displayname)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Score)
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<div>
+	<a asp-controller="Home" asp-action="Games">Back to Games</a>
+</div>
+

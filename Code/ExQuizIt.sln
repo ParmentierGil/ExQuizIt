@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExQuizIt.Web", "ExQuizIt.Web\ExQuizIt.Web.csproj", "{F9081C60-54B9-4614-885D-09B3662F1ABF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExQuizIt.Models", "ExQuizIt.Models\ExQuizIt.Models.csproj", "{4E70588A-6A43-4E29-ADB8-87DF1B67ED68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9081C60-54B9-4614-885D-09B3662F1ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9081C60-54B9-4614-885D-09B3662F1ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9081C60-54B9-4614-885D-09B3662F1ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9081C60-54B9-4614-885D-09B3662F1ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E70588A-6A43-4E29-ADB8-87DF1B67ED68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E70588A-6A43-4E29-ADB8-87DF1B67ED68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E70588A-6A43-4E29-ADB8-87DF1B67ED68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E70588A-6A43-4E29-ADB8-87DF1B67ED68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {142DEA36-5138-4DE7-A209-C8FCCA9E60E4}
+	EndGlobalSection
+EndGlobal

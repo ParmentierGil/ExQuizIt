@@ -1,0 +1,53 @@
+﻿@model ExQuizIt.Models.Question
+
+@{
+    ViewData["Title"] = "AddQuestion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddQuestion</h1>
+
+<h4>Question @(Model.QuestionNumber + 1)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+		<form asp-action="AddQuestion">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="GameId" />
+			<input type="hidden" asp-for="QuestionNumber" value="@Model.QuestionNumber"/>
+			<div class="form-group">
+				<label asp-for="QuestionText" class="control-label"></label>
+				<input asp-for="QuestionText" class="form-control" value="" />
+				<span asp-validation-for="QuestionText" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="CorrectAnswer" class="control-label"></label>
+				<input asp-for="CorrectAnswer" class="form-control" value="" />
+				<span asp-validation-for="CorrectAnswer" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="WrongAnswer1" class="control-label"></label>
+				<input asp-for="WrongAnswer1" class="form-control" value="" />
+				<span asp-validation-for="WrongAnswer1" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="WrongAnswer2" class="control-label"></label>
+				<input asp-for="WrongAnswer2" class="form-control" value="" />
+				<span asp-validation-for="WrongAnswer2" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="WrongAnswer3" class="control-label"></label>
+				<input asp-for="WrongAnswer3" class="form-control" value="" />
+				<span asp-validation-for="WrongAnswer3" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="AddQuestion" class="btn btn-primary" />
+			</div>
+		</form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Games">Back to Games</a>
+</div>
+

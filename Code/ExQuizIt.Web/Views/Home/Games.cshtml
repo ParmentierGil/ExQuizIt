@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ExQuizIt.Models.Game>
+@inject UserManager<User> userManager
+
+@{
+	ViewData["Title"] = "Games";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Games</h1>
+
+<p>
+	@if (User.Identity.IsAuthenticated && User.IsInRole("Quizmaster"))
+	{
+		string userId = userManager.GetUserId(User);
+		<a asp-controller="Home" asp-action="CreateNewGame" asp-route-id="@userId">Create a Quiz</a>
+	}
+</p>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Difficulty)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Subject)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.QuestionCount)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.TimeCreated)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Difficulty)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Subject)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.QuestionCount)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TimeCreated)
+			</td>
+			@if (User.Identity.IsAuthenticated && User.IsInRole("Player"))
+			{
+				<td>
+					@{
+						var gp = new GamePlayer()
+						{
+							GameId = item.GameId,
+							PlayerId = userManager.GetUserId(User)
+						};
+					}
+					@Html.ActionLink("Play", "Play", "Game", gp)
+				</td>
+			}
+		</tr>
+		}
+	</tbody>
+</table>

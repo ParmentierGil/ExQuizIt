@@ -1,0 +1,59 @@
+﻿
+@{
+	ViewData["Title"] = "Play";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	Question question = Model.Game.Questions.ToArray()[Model.QuestionNumber];
+}
+
+@model ExQuizIt.Models.GamePlayer
+
+<h1>Question @(Model.QuestionNumber + 1)</h1>
+<h2>@(question.QuestionText)</h2>
+
+@{ string[] answers = { question.CorrectAnswer, question.WrongAnswer1, question.WrongAnswer2, question.WrongAnswer3 };
+
+	for (int i = 0; i < 4; i++)
+	{
+		Random rnd = new Random();
+		int rndint = rnd.Next(answers.Length);
+
+		string randAnswer = answers[rndint];
+
+		if (randAnswer == question.CorrectAnswer)
+		{
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("RightAnswer", "Game", Model)'">@randAnswer</button>
+		}
+		else
+		{
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("WrongAnswer", "Game", Model)'">@randAnswer</button>
+		}
+
+		answers = answers.Where(val => val != randAnswer).ToArray();
+	}
+}
+
+@{
+	if (Model.QuestionNumber != 0 && ViewBag.LastQuestionCorrect)
+	{
+		<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+			<div class="card-header">Answer correct! +100 points</div>
+			<div class="card-body">
+				<h1 class="card-title">Score: @ViewBag.Score</h1>
+			</div>
+		</div>
+	}
+	else if (Model.QuestionNumber != 0)
+	{
+		<div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+			<div class="card-header">Answer not correct! -150 points</div>
+			<div class="card-body">
+				<h1 class="card-title">Score: @ViewBag.Score</h1>
+			</div>
+		</div>
+	}
+}
+
+
+
+
+
